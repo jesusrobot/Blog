@@ -1,0 +1,208 @@
+:root{
+    --primary-color: #313131;
+    --secondary-color: #bebebe;
+    --background-color: #F7F7F7;
+    --black: #070707;
+    --grey: #666666;
+    --blue:  dodgerblue;
+    --red: lightcoral;
+    --red-background: rgb(255, 221, 221);
+    --mb-alto: 1.5rem;
+    --mb-bajo: .8rem;
+    --size: 1.2rem;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    padding: 4vh 4vw;
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    color: var(--blue);
+    text-decoration: none;
+}
+.nav{
+    width: 21vw;
+    height: 92vh;
+    border-right: 1px solid var(--secondary-color);
+    position: fixed;
+}
+.author{
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: .3rem;
+    color: var(--black);
+}
+.job{
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+/* tags */
+.tag{
+    color: var(--black);
+    font-weight: 500;
+    text-decoration: none;
+    font-size: 1rem;
+}
+.tag:hover{
+    color: var(--secondary-color);
+}
+/* posts */
+.posts{
+    width: 81vw;
+    padding: 0 5rem;
+    margin-left: 21vw;
+}
+.post{
+    width: 80%;
+    margin-bottom: var(--mb-alto);
+    padding: 1rem 2.5rem;
+    border: 1px solid var(--secondary-color);
+}
+.post-title{
+    display: inline-block;
+    color: var(--black);
+    font-size: 1.6rem;
+    text-decoration: none;
+    margin-bottom: .4rem;
+}
+.post-date{
+    color: var(--secondary-color);
+    font-size: 1rem;
+    margin-bottom: var(--mb-bajo);
+}
+.post-description{
+    color: var(--primary-color);
+    margin-bottom: .5rem;
+    font-size: var(--size);
+}
+.post-link{
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+}
+.post-tag{
+    color: var(--secondary-color);
+}
+/* post */
+.post-container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+header{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.back-button{
+    font-weight: 800;
+    font-size: var(--size);
+    color: var(--black);
+}
+.article{
+    width: 60%;
+    padding: 1rem 2rem;
+}
+.content-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+.content-date {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    margin-bottom: var(--mb-alto); 
+}
+/* class content */
+p.parrafo{
+    color: var(--primary-color);
+    line-height: 1.5;
+    margin-bottom: var(--mb-alto);
+    font-size: var(--size);
+}
+
+.content-link {
+    display: inline-block;
+    font-weight: 800;
+    color: var(--blue);
+}
+.content-code{
+    display: inline-block;
+    width: 100%;
+    background: var(--background-color);
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: var(--mb-alto);
+    color: var(--primary-color);
+}
+ul{
+    padding: 1rem 3rem;
+    color: var(--primary-color);
+    margin-bottom: var(--mb-alto);
+}
+li {
+    font-size: var(--size);
+    margin-bottom: var(--mb-bajo);
+}
+.content-mark{
+    color: var(--red);
+    background: var(--red-background);
+    padding: 1px 6px;
+}
+.content-img-container{
+    width: 100%;
+    margin-bottom: var(--mb-alto);
+}
+.content-img-container > img {
+    width: 100%;
+    margin-bottom: .5rem;
+}
+.content-footer{
+    color: var(--secondary-color);
+    font-size: var(--size);
+}
+blockquote {
+    font-size: var(--size);
+    color: var(--primary-color);
+    padding: 1rem 3rem;
+    border-left: 3px solid var(--blue);
+    margin-bottom: var(--mb-alto);
+    font-style: italic;
+}
+/* Movil */
+@media only screen and (min-width: 320px) and (max-width: 736px){
+    :root{
+        --size: 1.1rem;
+    }
+    body{
+        /* display: flex; */
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+    }
+    .nav{
+        width: 100%;
+        height: auto;
+        position: static;
+        border-right: none;
+        margin-bottom: 1rem;
+    }
+    .posts{
+        padding: 0 0rem;
+        margin-left: 0;
+    }
+    .article {
+        width: 90%;
+    }
+    .content-code{
+        width: 80%;
+    }
+    ul{
+        padding: 1rem 1.5rem;
+    }
+}
