@@ -1,7 +1,7 @@
 :root{
     --primary-color: #313131;
     --secondary-color: #bebebe;
-    --background-color: #F7F7F7;
+    --background-color: rgb(235, 235, 235);
     --black: #070707;
     --grey: #666666;
     --blue:  dodgerblue;
@@ -63,7 +63,7 @@ a{
     margin-left: 21vw;
 }
 .post{
-    width: 80%;
+    width: 100%;
     margin-bottom: var(--mb-alto);
     padding: 1rem 2.5rem;
     border: 1px solid var(--secondary-color);
@@ -148,7 +148,6 @@ p.sub-titulo {
     font-size: 1.2rem;
     margin-bottom: var(--mb-alto);
     color: #85618B;
-
 }
 ul{
     padding: 1rem 3rem;
