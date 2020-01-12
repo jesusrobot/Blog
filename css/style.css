@@ -11,6 +11,10 @@
     --mb-bajo: .8rem;
     --size: 1.2rem;
 }
+.salto{
+    background: red;
+    margin-bottom: 1rem;
+}
 *{
     margin: 0;
     padding: 0;
@@ -126,7 +130,11 @@ p.parrafo{
     margin-bottom: var(--mb-alto);
     font-size: var(--size);
 }
-
+p.sub-titulo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: var(--mb-alto);
+}
 .content-link {
     display: inline-block;
     font-weight: 800;
@@ -139,7 +147,8 @@ p.parrafo{
     padding: 1.5rem;
     font-size: 1.2rem;
     margin-bottom: var(--mb-alto);
-    color: var(--primary-color);
+    color: #85618B;
+
 }
 ul{
     padding: 1rem 3rem;
