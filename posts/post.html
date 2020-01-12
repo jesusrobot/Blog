@@ -13,31 +13,27 @@
             <a href="../index.html" class="back-button">Regresar</a>
         </header> 
         <div class="article">
-            <h1 class="content-title">Este es mi primer post: Porque, y para que es este espacio</h1>
+            <h1 class="content-title">Mis notas de Git, Todo un sistema de control de versiones</h1>
             <p class="content-date">Sab 11 de Ene</p>
-            <p class="parrafo">Lorem ipsum dolor sit amet consectetur <a href="#" class="content-link">goto<link rel="stylesheet" href=""></a> adipisicing elit. Odio, numquam unde. Eveniet laudantium optio perferendis rerum assumenda recusandae nobis nulla explicabo incidunt expedita tenetur dolorum, autem architecto sapiente error quasi?</p>
-            <p class="parrafo">Commando git</p>
-            <code class="content-code">git stash list</code>
-            <p class="parrafo">Donde</p>
-            <ul>
-                <li><span class="content-mark">stash</span> representa un comando</li>
-                <li><span class="content-mark">stash</span> representa un comando</li>
-                <li><span class="content-mark">stash</span> representa un comando</li>
-                <li><span class="content-mark">stash</span> representa un comando</li>
-                <li><span class="content-mark">stash</span> representa un comando</li>
-                <li><span class="content-mark">stash</span> representa un comando</li>
-            </ul>
-            <p class="parrafo"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, aliquam ratione magnam hic perferendis incidunt autem itaque doloremque illo voluptates tempora voluptate eveniet aspernatur consequuntur quo deserunt dignissimos temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate amet commodi provident veniam dolorem reprehenderit rem delectus modi dolores! Doloribus non cum nostrum aliquid voluptates distinctio labore quas, consequatur sed. Ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, numquam unde. Eveniet laudantium optio perferendis rerum assumenda recusandae nobis nulla explicabo incidunt expedita tenetur dolorum, autem architecto sapiente error quasi?</p>
-            <div class="content-img-container">
-                <img src="https://images.pexels.com/photos/3375493/pexels-photo-3375493.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
-                <p class="content-footer">Pie de pagina de la foto</p>
-            </div>
-            <p class="parrafo">Lorem ipsum dolor sit amet consectetur <a href="#" class="content-link">goto<link rel="stylesheet" href=""></a> adipisicing elit. Odio, numquam unde. Eveniet laudantium optio perferendis rerum assumenda recusandae nobis nulla explicabo incidunt expedita tenetur dolorum, autem architecto sapiente error quasi?</p>
-            <p class="parrafo"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, aliquam ratione magnam hic perferendis incidunt autem itaque doloremque illo voluptates tempora voluptate eveniet aspernatur consequuntur quo deserunt dignissimos temporibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate amet commodi provident veniam dolorem reprehenderit rem delectus modi dolores! Doloribus non cum nostrum aliquid voluptates distinctio labore quas, consequatur sed. Ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, numquam unde. Eveniet laudantium optio perferendis rerum assumenda recusandae nobis nulla explicabo incidunt expedita tenetur dolorum, autem architecto sapiente error quasi?</p>
-            <blockquote>Lorem ipsum dolor sit amet consectetur adipisicing elit.</blockquote>
-            <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ducimus delectus eius fuga tempore architecto dicta vel voluptates commodi soluta molestiae? Dolorum corrupti quas rerum? Incidunt dolore doloribus ut velit!</p>
-            <p class="parrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, ducimus delectus eius fuga tempore architecto dicta vel voluptates commodi soluta molestiae? Dolorum corrupti quas rerum? Incidunt dolore doloribus ut velit!</p>
+            <p class="parrafo">Git es un software que nos permite registrar los cambios que vamos haciendo a lo largo del tiempo en nuestro proyecto (o repositorio como lo llama git), para poder así echar vuelta atrás cuando lo necesitemos. </p>
+            <p class="parrafo">Esta herramienta es muy útil a la hora de crear software porque aparte de todos los beneficios que nos dan los “Viajes en el tiempo”, también nos ofrece una forma mucho más fácil y sin tantos quebraderos de cabeza de organizar las versiones de nuestro repositorio.</p>
+            <p class="parrafo">Es por estas características y otras muchas más (entre las cuales también está la posibilidad de trabajar en equipo) que me e decidido y por las cuales tu tambien deberias, a por fin a aprender este sistema de gestión de versiones llamado git.</p>
+            <p class="parrafo"> Y como resultado de las horas de estudio que e invertido en esta tarea han surgido estas notas las cuales comparto con todo el amor del mundo con ustedes, espero y sean de utilidad</p>
+            <p class="parrafo">Entonces, basta de palabras.</p>
+            <p class="sub-titulo">Los comandos en git y otras herramientas de consola</p>
+            <p class="parrafo">Las órdenes en git al igual que como sucede con otras tantas herramientas de consola, empiezan con una palabra clave que nos indica que lo que viene a continuación forma parte de la herramienta, en este caso la palabra reservada es <span class="content-mark">git</span> y  a continuación  van los comandos los cuales son las funciones que tiene la herramienta y que a la vez reciben parámetros los cuales sirven para cambiar el funcionamiento del comando que los recibe.</p>
+            <p class="parrafo">Un ejemplo de orden seria:</p>
+            <div class="content-code">git --version</div>
+            <p class="sub-titulo">Que git sepa quien somos</p>
+            <p class="parrafo">Antes de comenzar, hay que agregar nuestra identidad a git, para que a la hora de hacer un commit se guarde con nuestro nombre. Para esto usamos los siguientes comandos</p>
+            <p class="content-code">git config --global user.name "tu nombre o nickname" <br> <span></span> <br> git config --global user.name "tu email"</p>
+            <p class="parrafo">Con el primero comando agregamos nuestro nombre a git y con el segundo nuestro email, usamos <span class="content-mark">--global</span> para que cada vez se haga un commit se grabe con estos datos.</p>
+            <p class="parrafo">Para ver el archivo de configuracion del usuario utilizamos este comando</p>
+            <p class="content-code">git config --global -e</p>
+            <p class="parrafo">Para salir escribimos <span class="content-mark">:q</span></p>
+            <!-- hasta aqui me quede xd -->
         </div>
+        <p class="post-date">Tags: GIT</p>
     </div>
 </body>
 </html>
