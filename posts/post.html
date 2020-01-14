@@ -13,6 +13,7 @@
             <a href="../index.html" class="back-button">Regresar</a>
         </header> 
         <div class="article">
+            <!-- post del 11 de enero del 2020 -->
             <h1 class="content-title">Mis notas de Git, Todo un sistema de control de versiones</h1>
             <p class="content-date">Sab 11 de Ene</p>
             <p class="parrafo">Git es un software que nos permite registrar los cambios que vamos haciendo a lo largo del tiempo en nuestro proyecto (o repositorio como lo llama git), para poder así echar vuelta atrás cuando lo necesitemos. </p>
@@ -43,16 +44,59 @@
             <p class="content-code">git help</p>
             <p class="parrafo">Para obtener <b>ayuda</b> mas <b>especifica</b> sobre un comando</p>
             <p class="content-code">git help <b>comando</b></p>
-            <p class="parrafo">Para ver el estado de los archivos de nuestro repositorio.</p>
+            <p class="parrafo">Para ver el <b>estado de los archivos</b> de nuestro repositorio.</p>
             <p class="content-code">git status</p>
             <p class="parrafo">Este comando sirve para diferenciar los archivos que estan en el <span class="content-mark">stage</span> de los que no lo estan, tambien es sin lugar a dudas uno de los comandos utilizados de git.</p>
-            <!-- hasta aqui me quede xd 12 de enero 2020 -->
+            <!-- post del 13 de enero del 2020 -->
+            <p class="parrafo">Algunos <b>parámetros utiles</b> para el comando <b>status</b>.</p>
+            <ul>
+                <li><span class="content-mark">-s</span> (silent) para mostrar únicamente los archivos que se han modificado o están en el stage.</li>
+                <li><span class="content-mark">-b</span> (branch) para ver la rama en la que estamos trabajando.</li>
+            </ul>
+            <!-- post del 12 de enero del 2020 -->
             <p class="sub-titulo">Flujo de trabajo en git (Local)</p>
             <p class="parrafo">El flujo de trabajo en git es algo muy fácil, todo comienza en el <span class="content-mark">Working Directory</span> desde aquí podemos trabajar sin que git modifique nuestra linea del tiempo. Al usar el comando <span class="content-mark">status</span>, todos estos archivos que vamos creando o modificando se mostran de color rojo.</p>
             <p class="parrafo">Ya después de que hemos hecho los cambios necesarios en el repositorio hay que pasar los archivos al <span class="content-mark">Staging Area</span>, los archivos se mostraran de color verde cuando ejecutemos el comando <span class="content-mark">status</span>.</p>
             <p class="parrafo">Esta parte del proceso podemos verla como un escenario en el que pasamos todos los archivos que ya están listos para tomarles una fotografía. Ya por último tomamos la fotografía usando el comando <span class="content-mark">commit</span>, con esto estamos haciendo una copia de el estado actual de nuestros archivos y a la cual podremos regresar cuando queramos.</p>
             <div class="content-img-container"><img src="/assets/imgs/git-workflow.png" alt=""></div>
             <p class="content-footer">Representacion grafica del flujo de trabajo de git</p>
+            <!-- post del 13 de enero del 2020  -->
+            <p class="sub-titulo">Agregar archivos al Stage</p>
+            <p class="parrafo">Como vimos previamente, antes de hacer un commit de nuestro repositorio hay que agregar los archivos al stage. Para esto usamos el comando add.</p>
+            <p class="parrafo">hay distintas formas de agregar archivos al stage, aquí algunas</p>
+            <p class="parrafo">Agregar un <b>unico archivo</b></p>
+            <p class="content-code">git add <b>nombre</b></p>
+            <p class="parrafo">Agregar todos los <b>archivos modificados</b> del working directory</p>
+            <p class="content-code">git add . <br> <span> </span> <br> git add -A</p>
+            <p class="parrafo">Agregar todos los archivos que tengan una <b>determinada extensión</b></p>
+            <p class="content-code">git add *.extensión</p>
+            <p class="parrafo">Agregar todos los archivos <b>dentro de una carpeta</b></p>
+            <p class="content-code">git add carpeta/</p>
+            <p class="parrafo">También podemos hacer combinaciones, por ejemplo para agregar todos los archivos que estén dentro de una carpeta y que posean una determinada extensión se puede hacer así:</p>
+            <p class="content-code">git add carpeta/*.extensión</p>
+            <p class="parrafo">Tambien podemos <b>excluir archivos del stage</b> con la siguiente instrucción</p>
+            <p class="content-code">git reset <b>archivo</b></p>
+            <p class="sub-titulo">Hacer commits</p>
+            <p class="parrafo">Los commits en git son como fotografías que captan el estado actual de nuestro repositorio y que se guardan en la línea del tiempo de la rama en la que estamos trabajando, para que si lo necesitamos podamos volver.</p>
+            <p class="parrafo">Podemos hacer un commit de la siguiente manera</p>
+            <p class="content-code">git commit -m "mensaje del commit"</p>
+            <p class="parrafo">Una buena práctica a la hora de escribir los mensajes de los commits es que deben de esta en tiempo presente y que describan lo que hicimos exactamente y el o los archivos donde hicimos los cambios.</p>
+            <p class="parrafo">Para mas informacion de los mensajes mira este post de <a href="https://www.genbeta.com/desarrollo/son-nuestros-comentarios-en-los-commits-lo-suficientemente-utiles">Genbeta</a></p>
+            <p class="parrafo">Para <b>ver la línea del tiempo de commits</b> de la rama en la que estamos trabajando (del más nuevo al más viejo).</p>
+            <p class="content-code">git log</p>
+            <p class="parrafo">Algunos parámetros para ver de una forma más estilizada los commits de la línea del tiempo.</p>
+            <ul>
+                <li><span class="content-mark">--online</span> Para mostrar los commits de una manera mas corta</li>
+                <li><span class="content-mark">--all</span>Para mostrar la informacion de la rama en la que trabajamos</li>
+                <li><span class="content-mark">--decorate</span> y <span class="content-mark">--graph</span> sirven para ver de una forma mas estilizada la informacion que nos muesta este comando</li>
+            </ul>
+            <p class="sub-titulo">Crear alias</p>
+            <p class="parrafo">Los alias son shortcuts que podemos crear en git para ahorrarnos el tiempo de escribir largas líneas de parámetros.</p>
+            <p class="parrafo">Así es como se crean: </p>
+            <p class="content-code">git config --global alias.tuShortcut "comando a ejecutar"</p>
+            <p class="parrafo">Dos alias para simplificar la existencia</p>
+            <p class="content-code">git config --global alias.lg "log --oneline --decorate --all --graph" <br> <span> </span> <br> git config --global alias.s "status -s -b"</p>
+
         </div>
         <p class="post-date">Tags: GIT</p>
     </div>
