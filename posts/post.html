@@ -23,7 +23,7 @@
             <p class="sub-titulo">Los comandos en git y otras herramientas de consola</p>
             <p class="parrafo">Las órdenes en git al igual que como sucede con otras tantas herramientas de consola, empiezan con una palabra clave que nos indica que lo que viene a continuación forma parte de la herramienta, en este caso la palabra reservada es <span class="content-mark">git</span> y  a continuación  van los comandos los cuales son las funciones que tiene la herramienta y que a la vez reciben parámetros los cuales sirven para cambiar el funcionamiento del comando que los recibe.</p>
             <p class="parrafo">Un ejemplo de orden seria:</p>
-            <div class="content-code">git --version</div>
+            <div class="content-code">git stash list</div>
             <p class="sub-titulo">Que git sepa quien somos</p>
             <p class="parrafo">Antes de comenzar, hay que agregar nuestra identidad a git, para que a la hora de hacer un commit se guarde con nuestro nombre. Para esto usamos los siguientes comandos</p>
             <p class="content-code">git config --global user.name "tu nombre o nickname" <br> <span></span> <br> git config --global user.name "tu email"</p>
@@ -31,7 +31,6 @@
             <p class="parrafo">Para ver el archivo de configuracion del usuario utilizamos este comando</p>
             <p class="content-code">git config --global -e</p>
             <p class="parrafo">Para salir escribimos <span class="content-mark">:q</span></p>
-            <!-- hasta aqui me quede xd -->
             <p class="sub-titulo">Crear un repositorio (Local)</p>
             <p class="parrafo">Crear un repositorio con git es una tarea muy sencilla, unicamente hay que teclear el siguiente comando</p>
             <p class="content-code">git init</p>
@@ -47,8 +46,13 @@
             <p class="parrafo">Para ver el estado de los archivos de nuestro repositorio.</p>
             <p class="content-code">git status</p>
             <p class="parrafo">Este comando sirve para diferenciar los archivos que estan en el <span class="content-mark">stage</span> de los que no lo estan, tambien es sin lugar a dudas uno de los comandos utilizados de git.</p>
-            <p class="sub-titulo">Flujo de trabajo en git</p>
-            <!--aqui me quede xd-->
+            <!-- hasta aqui me quede xd 12 de enero 2020 -->
+            <p class="sub-titulo">Flujo de trabajo en git (Local)</p>
+            <p class="parrafo">El flujo de trabajo en git es algo muy fácil, todo comienza en el <span class="content-mark">Working Directory</span> desde aquí podemos trabajar sin que git modifique nuestra linea del tiempo. Al usar el comando <span class="content-mark">status</span>, todos estos archivos que vamos creando o modificando se mostran de color rojo.</p>
+            <p class="parrafo">Ya después de que hemos hecho los cambios necesarios en el repositorio hay que pasar los archivos al <span class="content-mark">Staging Area</span>, los archivos se mostraran de color verde cuando ejecutemos el comando <span class="content-mark">status</span>.</p>
+            <p class="parrafo">Esta parte del proceso podemos verla como un escenario en el que pasamos todos los archivos que ya están listos para tomarles una fotografía. Ya por último tomamos la fotografía usando el comando <span class="content-mark">commit</span>, con esto estamos haciendo una copia de el estado actual de nuestros archivos y a la cual podremos regresar cuando queramos.</p>
+            <div class="content-img-container"><img src="/assets/imgs/git-workflow.png" alt=""></div>
+            <p class="content-footer">Representacion grafica del flujo de trabajo de git</p>
         </div>
         <p class="post-date">Tags: GIT</p>
     </div>
