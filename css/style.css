@@ -166,14 +166,17 @@ li {
 .content-img-container{
     width: 100%;
     margin-bottom: var(--mb-alto);
+    display: flex;
+    justify-content: center;
 }
 .content-img-container > img {
-    width: 100%;
+    width: 60%;
     margin-bottom: .5rem;
 }
 .content-footer{
     color: var(--secondary-color);
-    font-size: var(--size);
+    font-size: 1rem;
+    text-align: center;
 }
 blockquote {
     font-size: var(--size);
