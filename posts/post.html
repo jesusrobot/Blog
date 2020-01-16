@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Jesus Velasco | Blog</title>
     <link rel="stylesheet" href="../css/style.css">
@@ -14,7 +14,7 @@
         </header> 
         <div class="article">
             <!-- post del 11 de enero del 2020 -->
-            <h1 class="content-title">Mis notas de Git, Todo un sistema de control de versiones</h1>
+            <h1 class="content-title">Mis notas de Git, Todo un sistema de control de versiones (Working in progress)</h1>
             <p class="content-date">Sab 11 de Ene</p>
             <p class="parrafo">Git es un software que nos permite registrar los cambios que vamos haciendo a lo largo del tiempo en nuestro proyecto (o repositorio como lo llama git), para poder así echar vuelta atrás cuando lo necesitemos. </p>
             <p class="parrafo">Esta herramienta es muy útil a la hora de crear software porque aparte de todos los beneficios que nos dan los “Viajes en el tiempo”, también nos ofrece una forma mucho más fácil y sin tantos quebraderos de cabeza de organizar las versiones de nuestro repositorio.</p>
@@ -22,16 +22,17 @@
             <p class="parrafo"> Y como resultado de las horas de estudio que e invertido en esta tarea han surgido estas notas las cuales comparto con todo el amor del mundo con ustedes, espero y sean de utilidad</p>
             <p class="parrafo">Entonces, basta de palabras.</p>
             <p class="sub-titulo">Los comandos en git y otras herramientas de consola</p>
-            <p class="parrafo">Las órdenes en git al igual que como sucede con otras tantas herramientas de consola, empiezan con una palabra clave que nos indica que lo que viene a continuación forma parte de la herramienta, en este caso la palabra reservada es <span class="content-mark">git</span> y  a continuación  van los comandos los cuales son las funciones que tiene la herramienta y que a la vez reciben parámetros los cuales sirven para cambiar el funcionamiento del comando que los recibe.</p>
+            <p class="parrafo">Las órdenes en git al igual que como sucede con otras tantas herramientas de consola, empiezan con una palabra clave que nos indica que lo que viene a continuación forma parte de la herramienta, en este caso la palabra reservada es <span class="content-mark">git</span> y seguido van los comandos los cuales son las funciones que tiene la herramienta y que a la vez reciben parámetros los cuales sirven para cambiar el funcionamiento del comando que los recibe.</p>
             <p class="parrafo">Un ejemplo de orden seria:</p>
             <div class="content-code">git stash list</div>
             <p class="sub-titulo">Que git sepa quien somos</p>
             <p class="parrafo">Antes de comenzar, hay que agregar nuestra identidad a git, para que a la hora de hacer un commit se guarde con nuestro nombre. Para esto usamos los siguientes comandos</p>
-            <p class="content-code">git config --global user.name "tu nombre o nickname" <br> <span></span> <br> git config --global user.name "tu email"</p>
+            <p class="content-code">git config --global user.name "tu nombre o nickname" <br> <span></span> <br> git config --global user.email "tu email"</p>
             <p class="parrafo">Con el primero comando agregamos nuestro nombre a git y con el segundo nuestro email, usamos <span class="content-mark">--global</span> para que cada vez se haga un commit se grabe con estos datos.</p>
             <p class="parrafo">Para ver el archivo de configuracion del usuario utilizamos este comando</p>
             <p class="content-code">git config --global -e</p>
             <p class="parrafo">Para salir escribimos <span class="content-mark">:q</span></p>
+            <p class="parrafo">Cuando usamos en git un parrametro con doble guion queremos decir que lo que estamos escribiendo es una palabra y en cambio cuando usamos uno solo estamos diciendo que es una sola letra que hace referencia a una palabra.</p>
             <p class="sub-titulo">Crear un repositorio (Local)</p>
             <p class="parrafo">Crear un repositorio con git es una tarea muy sencilla, unicamente hay que teclear el siguiente comando</p>
             <p class="content-code">git init</p>
@@ -58,8 +59,8 @@
             <p class="parrafo">El flujo de trabajo en git es algo muy fácil, todo comienza en el <span class="content-mark">Working Directory</span> desde aquí podemos trabajar sin que git modifique nuestra linea del tiempo. Al usar el comando <span class="content-mark">status</span>, todos estos archivos que vamos creando o modificando se mostran de color rojo.</p>
             <p class="parrafo">Ya después de que hemos hecho los cambios necesarios en el repositorio hay que pasar los archivos al <span class="content-mark">Staging Area</span>, los archivos se mostraran de color verde cuando ejecutemos el comando <span class="content-mark">status</span>.</p>
             <p class="parrafo">Esta parte del proceso podemos verla como un escenario en el que pasamos todos los archivos que ya están listos para tomarles una fotografía. Ya por último tomamos la fotografía usando el comando <span class="content-mark">commit</span>, con esto estamos haciendo una copia de el estado actual de nuestros archivos y a la cual podremos regresar cuando queramos.</p>
-<!--             <div class="content-img-container"><img src="https://image.slidesharecdn.com/git-intro-091215075529-phpapp01/95/git-and-github-13-728.jpg?cb=1260938801" alt=""></div> -->
-<!--             <p class="content-footer">Representacion grafica del flujo de trabajo de git</p> -->
+            <div class="content-img-container"><img src="/assets/imgs/git-workflow.png" alt=""></div>
+            <p class="content-footer">Representacion grafica del flujo de trabajo de git</p>
             <!-- post del 13 de enero del 2020  -->
             <p class="sub-titulo">Agregar archivos al Stage</p>
             <p class="parrafo">Como vimos previamente, antes de hacer un commit de nuestro repositorio hay que agregar los archivos al stage. Para esto usamos el comando add.</p>
@@ -80,6 +81,11 @@
             <p class="parrafo">Los commits en git son como fotografías que captan el estado actual de nuestro repositorio y que se guardan en la línea del tiempo de la rama en la que estamos trabajando, para que si lo necesitamos podamos volver.</p>
             <p class="parrafo">Podemos hacer un commit de la siguiente manera</p>
             <p class="content-code">git commit -m "mensaje del commit"</p>
+            <p class="parrafo">Hacer un commit de varias lineas.</p>
+            <p class="parrafo">Para escribir pulsamos <span class="content-mark">a</span> y para terminar el texto presionamos la tecla <span class="content-mark">esc</span> y para salir y guardar el commit <span class="content-mark">:wq</span>.</p>
+            <p class="content-code">git commit</p>
+            <p class="parrafo">Para agregar todos los archivos modificados al stage y al mismo tiempo hacer un commit.</p>
+            <p class="content-code">git commit -am "Mensaje del commit"</p>
             <p class="parrafo">Una buena práctica a la hora de escribir los mensajes de los commits es que deben de esta en tiempo presente y que describan lo que hicimos exactamente y el o los archivos donde hicimos los cambios.</p>
             <p class="parrafo">Para mas informacion de los mensajes mira este post de <a href="https://www.genbeta.com/desarrollo/son-nuestros-comentarios-en-los-commits-lo-suficientemente-utiles">Genbeta</a></p>
             <p class="parrafo">Para <b>ver la línea del tiempo de commits</b> de la rama en la que estamos trabajando (del más nuevo al más viejo).</p>
@@ -87,18 +93,49 @@
             <p class="parrafo">Algunos parámetros para ver de una forma más estilizada los commits de la línea del tiempo.</p>
             <ul>
                 <li><span class="content-mark">--online</span> Para mostrar los commits de una manera mas corta</li>
-                <li><span class="content-mark">--all</span>Para mostrar la informacion de la rama en la que trabajamos</li>
+                <li><span class="content-mark">--all</span> Para mostrar la informacion de la rama en la que trabajamos</li>
                 <li><span class="content-mark">--decorate</span> y <span class="content-mark">--graph</span> sirven para ver de una forma mas estilizada la informacion que nos muesta este comando</li>
             </ul>
+            <p class="parrafo">Reescribir el mensaje del último commit.</p>
+            <p class="content-code">git commit --amend -m "Mensaje del commit"</p>
             <p class="sub-titulo">Crear alias</p>
             <p class="parrafo">Los alias son shortcuts que podemos crear en git para ahorrarnos el tiempo de escribir largas líneas de parámetros.</p>
             <p class="parrafo">Así es como se crean: </p>
             <p class="content-code">git config --global alias.tuShortcut "comando a ejecutar"</p>
             <p class="parrafo">Dos alias para simplificar la existencia</p>
             <p class="content-code">git config --global alias.lg "log --oneline --decorate --all --graph" <br> <span> </span> <br> git config --global alias.s "status -s -b"</p>
-
+            <!-- post del 14 de enero del 2020  -->
+            <p class="sub-titulo">Viajes en el tiempo</p>
+            <p class="parrafo">Con git podemos movernos a cualquier parte de la línea del tiempo de nuestro repositorio.</p>
+            <p class="parrafo">Esta es una funcionalidad muy potente por que nos permite reconstruir nuestro proyecto a como estaba en cualquier punto y así poder revertir cambios que no nos hayan gustado o incluso hasta recuperar archivos borrados.</p>
+            <p class="parrafo">Para <b>restaurar</b> <b>todos los archivos</b> al último commit.</p>
+            <p class="content-code">git checkout --.</p>
+            <p class="parrafo">Para <b>restaurar</b> un <b>archivo específico</b> a como estaba en su último commit.</p>
+            <p class="content-code">git checkout --<b>nombre</b></p>
+            <p class="parrafo">Para movernos a un punto de la historia pero <b>conservando todos los cambios</b> posteriores a ese punto.</p>
+            <p class="content-code">git reset --soft <b>hash del commit</b></p>
+            <p class="parrafo">Para movernos a un punto de la historia pero <b>borrando todos los cambios</b> posteriores a ese punto de la historia.</p>
+            <p class="content-code">git reset --hard <b>hash del commit</b></p>
+            <!-- post del 15 de enero del 2020  -->
+            <p class="parrafo"><b>Comandos útiles</b> a la hora de hacer <b>viajes en el tiempo</b>.</p>
+            <p class="parrafo">Para ver las <b>diferencias</b> entre el último commit y el comento actual usamos el siguiente comando.</p>
+            <p class="content-code">git diff</p>
+            <p class="parrafo">Hay una variación del comando diff para ver las <b>diferencias</b> de  los archivos que están en el <b>stage</b></p>
+            <p class="content-code">git diff --staged</p>
+            <p class="parrafo">El siguiente comando es muy potente porque nos deja <b>ver todos los cambios que hemos hecho en nuestro proyecto</b>, incluso si borramos commits, esto es muy útil para revertir los cambios que hacemos cuando viajamos en el tiempo con  <span class="content-mark">--hard</span>.</p>
+            <p class="content-code">git reflog</p>
+            <p class="sub-titulo">Renombrar o borrar archivos con git</p>
+            <p class="parrafo">Para <b>renombrar</b> archivos.</p>
+            <p class="content-code">git mv <b>nombreOriginal</b> <b>nombreNuevo</b></p>
+            <p class="parrafo">Para <b>borrar</b> un archivo</p>
+            <p class="content-code">git rm <b>nombre</b></p>
+            <p class="parrafo">Cuando borremos o renombremos archivos ya sea con git o de forma manual siempre es recomendable usar</p>
+            <p class="content-code">git add -u</p>
+            <p class="parrafo">Antes de agregar al stage para no tener problemas ya que en ocasiones git add -A no reconoce de primeras los archivos borrados o que cambiaron de nombre.</p>
+            <p class="sub-titulo">Ignorar archivos</p>
+            <p class="parrafo">Con git podemos dejar de hacer seguimiento a los archivos que queramos para esto tenemos que crear un archivo <span class="content-mark">.gitignore</span> en la raíz de nuestro proyecto y a continuación dentro de este escribimos los nombres de los archivos que dejaremos sin seguimiento, pero cuidado que si actualizamos o borramos estos archivos despues no podremos recuperarlos.</p>
         </div>
-        <p class="post-date">Tags: GIT</p>
+        <p class="post-date">Tags: #GIT</p>
     </div>
 </body>
 </html>
