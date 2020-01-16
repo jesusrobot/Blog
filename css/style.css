@@ -145,7 +145,7 @@ p.sub-titulo {
     width: 100%;
     background: var(--background-color);
     padding: 1.5rem;
-    font-size: 1.2rem;
+    font-size: var(--size);
     margin-bottom: var(--mb-alto);
     color: #85618B;
 }
@@ -177,6 +177,7 @@ li {
     color: var(--secondary-color);
     font-size: 1rem;
     text-align: center;
+    margin-bottom: var(--mb-alto);
 }
 blockquote {
     font-size: var(--size);
@@ -207,13 +208,23 @@ blockquote {
         padding: 0 0rem;
         margin-left: 0;
     }
+    .post{
+        width: 85%;
+    }
     .article {
-        width: 90%;
+        width: 85%;
     }
     .content-code{
         width: 80%;
     }
     ul{
         padding: 1rem 1.5rem;
+    }
+    .content-img-container > img {
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+    .content-code{
+        font-size: 1rem;
     }
 }
