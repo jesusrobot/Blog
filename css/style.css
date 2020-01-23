@@ -15,6 +15,9 @@
     background: red;
     margin-bottom: 1rem;
 }
+.discus {
+    width: 60%;
+}
 *{
     margin: 0;
     padding: 0;
@@ -25,6 +28,7 @@ body{
     display: flex;
     justify-content: space-between;
 }
+
 a{
     color: var(--blue);
     text-decoration: none;
@@ -156,6 +160,7 @@ p.parrafo{
     margin-bottom: var(--mb-alto);
     font-size: var(--size);
 }
+
 p.sub-titulo {
     font-size: 1.5rem;
     font-weight: 800;
