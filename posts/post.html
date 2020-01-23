@@ -11,7 +11,8 @@
 <body>
     <div class="post-container">
         <header>
-            <a href="../index.html" class="back-button">Regresar</a>
+            <a class="author" href="../index.html">Jesus Velasco</a> 
+            <h2 class="job">Desarrollador web</h2>
         </header> 
         <div class="article">
             <!-- post del 11 de enero del 2020 -->
@@ -21,6 +22,7 @@
                 <span class="separador">|</span>
                 <p class="content-date">Sab 11 de Ene</p>
             </div>
+            <div class="content-img-container"><img class="principal" src="/assets/imgs/github-microsoft-generacion-xbox.png" alt=""></div>
             <p class="parrafo">Git es un software que nos permite registrar los cambios que vamos haciendo a lo largo del tiempo en nuestro proyecto (o repositorio como lo llama git), para poder así echar vuelta atrás cuando lo necesitemos. </p>
             <p class="parrafo">Esta herramienta es muy útil a la hora de crear software porque aparte de todos los beneficios que nos dan los “Viajes en el tiempo”, también nos ofrece una forma mucho más fácil y sin tantos quebraderos de cabeza de organizar las versiones de nuestro repositorio.</p>
             <p class="parrafo">Es por estas características y otras muchas más (entre las cuales también está la posibilidad de trabajar en equipo) que me e decidido y por las cuales tu tambien deberias, a por fin a aprender este sistema de gestión de versiones llamado git.</p>
@@ -196,7 +198,7 @@
             <p class="sub-titulo">Reservar para después (con git stash)</p>
             <p class="parrafo">Imaginemos que estemos trabajando en una nueva característica de nuestro proyecto, estamos en la rama principal y llevamos mucho tiempo desarrollandola,  pero aún no está lista y de buenas a primeras necesitamos desplegar nuestro proyecto, es muy probable que esta nueva característica cause problemas.</p>
             <p class="parrafo">Lo que haríamos para solucionar esto de forma manual (sin git) sería retirar todo ese código que hemos agregado por la nueva funcionalidad y guardarlo en cualquier otro lado para ahora así poder desplegar nuestra aplicación sin errores y después ya pasada la urgencia integrar de nuevo nuestro código para seguir trabajando.</p>
-            <p class="parrafo">Pues bien esto es exactamente lo que hace el comando <span class="content-mark">stash</span> de git, toma todos los cambios que hemos realizado desde el último commit y que no están en el stage y los guarda en un área temporal mientras resolvemos nuestra urgencia para que una vez terminada podamos sacar esos cambios y los reincorporamos al proyecto para seguir trabajando normalmente.</p>
+            <p class="parrafo">Pues bien esto es exactamente lo que hace el comando <span class="content-mark">stash</span> de git, toma todos los cambios que hemos realizado desde el último commit (esto incluye los que estan en el stage) y los guarda en un área temporal mientras resolvemos nuestra urgencia para que una vez terminada podamos sacar esos cambios y los reincorporamos al proyecto para seguir trabajando normalmente.</p>
             <p class="parrafo">Si bien podemos ahorrarnos esto creando una rama para esta funcionalidad en concreto, en el dia a dia se nos puede olvidar y ya cuando es demasiado tarde caemos en cuenta de que podíamos hacerlo de esta manera además <b>es muy fácil usar el stash</b>.</p>
             <div class="content-img-container"><img src="../assets/imgs/stash.png" alt=""></div>
             <p class="content-footer">Representacion grafica del stash</p>
@@ -211,11 +213,23 @@
             <p class="content-code">git stash apply <b>stash@{index}</b></p>
             <p class="parrafo">Para <b>borrar un stash</b> de nuestra lista de stashes.</p>
             <p class="content-code">git stash drop <b>stash@{index}</b></p>
+            <!-- post del 23 de enero del 2020 -->
+            <p class="parrafo">Otras formas de guardar en el stash</p>
+
+
+
+
+
+
+
+
+
+
         </div>
         <p class="post-date">Tags: <a href="#" class="tag">#GIT</a></p>
         <div id="disqus_thread" class="discus"></div>
-   
     </div>
+    <!-- scripts -->
     <script>
         (function() { // DON'T EDIT BELOW THIS LINE
         var d = document, s = d.createElement('script');
