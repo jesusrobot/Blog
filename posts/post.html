@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Jesus Velasco | Blog</title>
-    <!-- <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,700i,900,900i&display=swap" rel="stylesheet"> -->
+    <title>Jesus Velasco</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <div class="post-container">
         <header>
-            <a class="author" href="../index.html">Jesus Velasco</a> 
-            <h2 class="job">Desarrollador web</h2>
+            <a href="../index.html" class="back-button"><div class="img-back"><img  src="../assets/icons/back.svg" alt=""></div> Home <span class="separador">|</span>Seccion GIT</a> 
         </header> 
         <div class="article">
             <!-- post del 11 de enero del 2020 -->
@@ -22,7 +20,7 @@
                 <span class="separador">|</span>
                 <p class="content-date">Sab 11 de Ene</p>
             </div>
-            <div class="content-img-container"><img class="principal" src="../assets/imgs/github-microsoft-generacion-xbox.png" alt=""></div>
+            <div class="content-img-container"><img class="principal" src="/assets/imgs/10321172986_2cdc43bd0b_b.jpg" alt=""></div>
             <p class="parrafo">Git es un software que nos permite registrar los cambios que vamos haciendo a lo largo del tiempo en nuestro proyecto (o repositorio como lo llama git), para poder así echar vuelta atrás cuando lo necesitemos. </p>
             <p class="parrafo">Esta herramienta es muy útil a la hora de crear software porque aparte de todos los beneficios que nos dan los “Viajes en el tiempo”, también nos ofrece una forma mucho más fácil y sin tantos quebraderos de cabeza de organizar las versiones de nuestro repositorio.</p>
             <p class="parrafo">Es por estas características y otras muchas más (entre las cuales también está la posibilidad de trabajar en equipo) que me e decidido y por las cuales tu tambien deberias, a por fin a aprender este sistema de gestión de versiones llamado git.</p>
@@ -215,16 +213,60 @@
             <p class="content-code">git stash drop <b>stash@{index}</b></p>
             <!-- post del 23 de enero del 2020 -->
             <p class="parrafo">Otras formas de guardar en el stash</p>
-
-
-
-
-
-
-
-
-
-
+            <p class="parrafo">Para guardar todos los archivos modificados menos los que están en el stash por si queremos hacer un commit.</p>
+            <p class="content-code">git stash save --keep-index</p>
+            <p class="parrafo">Para incluir todos los archivos con cambios a la lista de archivos sin seguimiento de git</p>
+            <p class="content-code">git stash save --include-untrack</p>
+            <!-- post del 24 de enero del 2020 -->
+            <p class="sub-titulo">Que es el rebase?</p>
+            <p class="parrafo">Git rebase es un comando que al igual como lo hace merge, nos permite unir ramas pero con la diferencia de que rebase modifica la linea del tiempo para que aparezcan todos los commits de la rama que fusionamos justo después del último commit de la rama principal a la que le unimos la rama, haciendo parecer como que si nunca hubiera habido una rama o una fusión.</p>
+            <div class="content-img-container"><img src="../assets/imgs/rebase.jpeg" alt=""></div>
+            <p class="parrafo">Para utilizar rebase:</p>
+            <p class="content-code">git rebase <b>branch</b></p>
+            <p class="parrafo">Para mas informacion hacerca de rebase puedes ver esta pregunta en <a href="https://es.stackoverflow.com/questions/94536/para-qu%C3%A9-sirve-el-comando-o-par%C3%A1metro-rebase-en-git">stackoverflow</a></p>
+            <p class="sub-titulo">Rebase interactivo</p>
+            <p class="parrafo">Como ya dijimos antes un parámetro puede cambiar por completo el funcionamiento del comando que lo recibe, pues bien ese es el caso de rebase con <span class="content-mark">-i</span> abreviatura de interactive.</p>
+            <p class="parrafo">Esta funcionalidad es muy potente por que nos permite hacer varias cosas con un solo comando:</p>
+            <ul>
+                <li> <span class="content-mark">squash</span> Unir varios commits en uno</li>
+                <li> <span class="content-mark">reword</span> Corregir el mensaje de commits</li>
+                <li> <span class="content-mark">edit</span> Separar varios commits</li>
+            </ul>
+            <p class="parrafo">Unir commits</p>
+             <p class="parrafo">Para unir dos o mas commits en uno solo primero hay que ejecutar el rebase interactivo asi:</p>
+            <p class="content-code">git rebase -i HEAD~<b>numero</b></p>
+            <p class="parrafo">Donde va <b>numero</b> sustituimos por el numero de commits que queremos seleccionar para hacer los cambios.</p>
+            <div class="content-img-container"><img src="../assets/imgs/REBASE1TUTO.png" alt=""></div>
+            <p class="content-footer">Interfaz del Rebase intertactivo</p>
+            <p class="parrafo">Como podemos ver hasta arriba estan 3 commits que son los que seleccione con la sintaxis <span class="content-mark">HEAD~3</span>. Estos son los commits a los que se les aplicaran los cambios que seleccionamos.</p>
+            <p class="parrafo">En este caso lo que queremos hacer es unir todo en un solo commit para eso tenemos que pulsar la letra <span class="content-mark">a</span> para poder escribir y reemplazar la palabra que ya tenemos por defecto <span class="content-mark">pick</span> que aparece antes de cada commit por la palabra <span class="content-mark">squash</span> o simplemente por la <span class="content-mark">s</span> que es la letra por la que empieza squash.</p>
+            <p class="parrafo">Una vez terminado el paso anterior pulsamos <span class="content-mark">esc</span> y luego <span class="content-mark">:wq</span>.</p>
+            <p class="parrafo">Esto nos llevara a otra pantalla donde estan los mensajes de los 3 commits</p>
+            <div class="content-img-container"><img src="../assets/imgs/rebase2.png" alt=""></div>
+            <p class="parrafo">Lo unico que tenemos que hacer aqui es borrar los mensajes y poner el mensaje que tendra el nuevo commit.Una vez terminado pulsamos <span class="content-mark">esc</span> y <span class="content-mark">:wq</span> para guardar los cambios.</p>
+            <p class="parrafo">Para editar el mensaje de los commits ejecutamos el comando</p>
+            <p class="content-code">git rebase -i HEAD~<b>numero</b></p>
+            <p class="parrafo">como lo hicimos anteriormente, en este caso solo vamos a editar el mensaje del ultimo commit, por lo que sustituire <b>numero</b> por <b>1</b>.</p>
+            <div class="content-img-container"><img src="../assets/imgs/rebase3.png" alt=""></div>
+            <p class="parrafo">y como vez, sustituimos <span class="content-mark">pick</span> por <span class="content-mark">reword</span>.Guardamos cambios y nos mandara a una pantalla muy parecida a la que nos mostro git cuando fusionamos varios commits, en esa pantalla editamos el mensaje y guardamos.</p>
+            <p class="parrafo">Para dividir un commit en muchos</p>
+            <!-- post del 25 de enero del 2020 -->
+            <p class="parrafo">Primero hay que usar el comando que ya hemos estado usando e indicamos cuantos commits queremos tomar</p>
+            <p class="content-code">git rebase -i HEAD~<b>numero</b></p>
+            <p class="parrafo">Eso nos mandara a la pantalla que ya vimos anteriormente, seleccionamos el commit que queremos dividir escribiendo antes de su hash la palabra <span class="content-mark">edit</span>, pulsamos <span class="content-mark">:wq</span> para guardar cambios</p>
+            <p class="parrafo">Una vez fuera de la interfaz usamos el siguiente comando para revertir los cambios del ultimo commit sin perder los cambios</p>
+            <p class="content-code">git reset HEAD^</p>
+            <p class="parrafo">Ahora que los cambios que contenia el commit estan en el stage, listos para hacer con ellos los commits que necesitemos.</p>
+            <p class="parrafo">Una vez que terminemos usamos este comando para que git sepa que hemos terminado</p>
+            <p class="content-code">git rebase --continue</p>
+       
+       
+       
+       
+       
+       
+       
+       
         </div>
         <p class="post-date">Tags: <a href="#" class="tag">#GIT</a></p>
         <div id="disqus_thread" class="discus"></div>
