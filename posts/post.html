@@ -123,7 +123,7 @@
             <p class="content-code">git reset --hard <b>hash del commit</b></p>
             <!-- post del 15 de enero del 2020  -->
             <p class="parrafo"><b>Comandos útiles</b> a la hora de hacer <b>viajes en el tiempo</b>.</p>
-            <p class="parrafo">Para ver las <b>diferencias</b> entre el último commit y el comento actual usamos el siguiente comando.</p>
+            <p class="parrafo">Para ver las <b>diferencias</b> entre el último commit y el commit actual usamos el siguiente comando.</p>
             <p class="content-code">git diff</p>
             <p class="parrafo">Hay una variación del comando diff para ver las <b>diferencias</b> de  los archivos que están en el <b>stage</b></p>
             <p class="content-code">git diff --staged</p>
@@ -180,9 +180,9 @@
             <p class="parrafo">Los tags son una referencia a un commit. Normalmente los tags son usados para <b>marcar las versiones</b> de nuestro proyecto.</p>
             <p class="parrafo"><b>Agregar</b> un <b>Lightweight Tag</b> al último commit</p>
             <p class="content-code">git tag <b>nombre</b></p>
-            <p class="parrafo"><b>Agregar</b> un <b>Annotated Tag</b> al último commit</p>
-            <p class="content-code">git tag -a <b>version</b> -m “mensaje del tag”</p>
-            <p class="parrafo">En donde está la palabra <b>version</b> justo después de la bandera <span class="content-mark">-a</span> va el nombre de nuestra versión o la anotación de nuestro tag.</p>
+            <!-- <!-- <p class="parrafo"><b>Agregar</b> un <b>Annotated Tag</b> al último commit</p> -->
+            <!-- <p class="content-code">git tag -a <b>version</b> -m “mensaje del tag”</p> -->
+            <!-- <p class="parrafo">En donde está la palabra <b>version</b> justo después de la bandera <span class="content-mark">-a</span> va el nombre de nuestra versión o la anotación de nuestro tag.</p> -->
             <p class="parrafo">Agregar un <b>Annotated Tag</b> a <b>cualquier commit</b> de nuestra línea del tiempo</p>
             <p class="content-code">git tag -a <b>version</b> <b>hash</b> -m “mensaje del tag”</p>
             <p class="parrafo">En donde está la palabra <b>version</b> justo después de la bandera <span class="content-mark">-a</span> va el nombre de nuestra versión o la anotación de nuestro tag y donde esta la palabra <b>hash</b> va el hash referente a el commit que queremos etiquetar.</p>
@@ -221,11 +221,12 @@
             <p class="sub-titulo">Que es el rebase?</p>
             <p class="parrafo">Git rebase es un comando que al igual como lo hace merge, nos permite unir ramas pero con la diferencia de que rebase modifica la linea del tiempo para que aparezcan todos los commits de la rama que fusionamos justo después del último commit de la rama principal a la que le unimos la rama, haciendo parecer como que si nunca hubiera habido una rama o una fusión.</p>
             <div class="content-img-container"><img src="../assets/imgs/rebase.jpeg" alt=""></div>
+            <p class="content-footer">Representacion grafica del rebase</p>
             <p class="parrafo">Para utilizar rebase:</p>
             <p class="content-code">git rebase <b>branch</b></p>
             <p class="parrafo">Para mas informacion hacerca de rebase puedes ver esta pregunta en <a href="https://es.stackoverflow.com/questions/94536/para-qu%C3%A9-sirve-el-comando-o-par%C3%A1metro-rebase-en-git">stackoverflow</a></p>
             <p class="sub-titulo">Rebase interactivo</p>
-            <p class="parrafo">Como ya dijimos antes un parámetro puede cambiar por completo el funcionamiento del comando que lo recibe, pues bien ese es el caso de rebase con <span class="content-mark">-i</span> abreviatura de interactive.</p>
+            <p class="parrafo">Como ya dijimos antes, un parámetro puede cambiar por completo el funcionamiento del comando que lo recibe, pues bien ese es el caso de rebase con <span class="content-mark">-i</span> abreviatura de interactive.</p>
             <p class="parrafo">Esta funcionalidad es muy potente por que nos permite hacer varias cosas con un solo comando:</p>
             <ul>
                 <li> <span class="content-mark">squash</span> Unir varios commits en uno</li>
