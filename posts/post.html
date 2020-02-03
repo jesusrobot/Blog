@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -7,70 +8,110 @@
     <title>Jesus Velasco</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
     <div class="post-container">
         <header>
-            <a href="../index.html" class="back-button"><div class="img-back"><img  src="../assets/icons/back.svg" alt=""></div> Home <span class="separador">|</span>Seccion GIT</a> 
-        </header> 
+            <a href="../index.html" class="back-button">
+                <div class="img-back"><img src="../assets/icons/back.svg" alt=""></div> Home <span
+                    class="separador">|</span>Seccion GIT
+            </a>
+        </header>
         <div class="article">
             <!-- post del 11 de enero del 2020 -->
-            <h1 class="content-title">Mis notas de Git, Todo un sistema de control de versiones (Working in progress)</h1>
+            <h1 class="content-title">Mis notas de Git, Todo un sistema de control de versiones (Working in progress)
+            </h1>
             <div class="data-post">
                 <p class="author-post"><span>Por</span> Jesus Velasco</p>
                 <span class="separador">|</span>
                 <p class="content-date">Sab 11 de Ene</p>
             </div>
-            <div class="content-img-container"><img class="principal" src="../assets/imgs/10321172986_2cdc43bd0b_b.jpg" alt=""></div>
-            <p class="parrafo">Git es un software que nos permite registrar los cambios que vamos haciendo a lo largo del tiempo en nuestro proyecto (o repositorio como lo llama git), para poder así echar vuelta atrás cuando lo necesitemos. </p>
-            <p class="parrafo">Esta herramienta es muy útil a la hora de crear software porque aparte de todos los beneficios que nos dan los “Viajes en el tiempo”, también nos ofrece una forma mucho más fácil y sin tantos quebraderos de cabeza de organizar las versiones de nuestro repositorio.</p>
-            <p class="parrafo">Es por estas características y otras muchas más (entre las cuales también está la posibilidad de trabajar en equipo) que me e decidido y por las cuales tu tambien deberias, a por fin a aprender este sistema de gestión de versiones llamado git.</p>
-            <p class="parrafo"> Y como resultado de las horas de estudio que e invertido en esta tarea han surgido estas notas las cuales comparto con todo el amor del mundo con ustedes, espero y sean de utilidad</p>
+            <div class="content-img-container"><img class="principal" src="../assets/imgs/10321172986_2cdc43bd0b_b.jpg"
+                    alt=""></div>
+            <p class="parrafo">Git es un software que nos permite registrar los cambios que vamos haciendo a lo largo
+                del tiempo en nuestro proyecto (o repositorio como lo llama git), para poder así echar vuelta atrás
+                cuando lo necesitemos. </p>
+            <p class="parrafo">Esta herramienta es muy útil a la hora de crear software porque aparte de todos los
+                beneficios que nos dan los “Viajes en el tiempo”, también nos ofrece una forma mucho más fácil y sin
+                tantos quebraderos de cabeza de organizar las versiones de nuestro repositorio.</p>
+            <p class="parrafo">Es por estas características y otras muchas más (entre las cuales también está la
+                posibilidad de trabajar en equipo) que me he decidido y por las cuales tú tambien deberías, a por fin a
+                aprender este sistema de gestión de versiones llamado git.</p>
+            <p class="parrafo"> Y como resultado de las horas de estudio que e invertido en esta tarea han surgido estas
+                notas las cuales comparto con todo el amor del mundo con ustedes. Espero y sean de utilidad</p>
             <p class="parrafo">Entonces, basta de palabras.</p>
             <p class="sub-titulo">Los comandos en git y otras herramientas de consola</p>
-            <p class="parrafo">Las órdenes en git al igual que como sucede con otras tantas herramientas de consola, empiezan con una palabra clave que nos indica que lo que viene a continuación forma parte de la herramienta, en este caso la palabra reservada es <span class="content-mark">git</span> y seguido van los comandos los cuales son las funciones que tiene la herramienta y que a la vez reciben parámetros los cuales sirven para cambiar el funcionamiento del comando que los recibe.</p>
-            <p class="parrafo">Un ejemplo de orden seria:</p>
+            <p class="parrafo">Las órdenes en git al igual que como sucede con otras tantas herramientas de consola,
+                empiezan con una palabra clave que nos indica que lo que viene a continuación forma parte de la
+                herramienta, en este caso la palabra reservada es <span class="content-mark">git</span> y seguido van
+                los comandos los cuales son las funciones que tiene la herramienta y que a la vez reciben parámetros los
+                cuales sirven para cambiar el funcionamiento del comando que los recibe.</p>
+            <p class="parrafo">Un ejemplo de orden sería:</p>
             <p class="content-code">git stash list</p>
-            <p class="sub-titulo">Que git sepa quien somos</p>
-            <p class="parrafo">Antes de comenzar, hay que agregar nuestra identidad a git, para que a la hora de hacer un commit se guarde con nuestro nombre. Para esto usamos los siguientes comandos</p>
-            <p class="content-code">git config --global user.name "tu nombre o nickname" <br> <span></span> <br> git config --global user.email "tu email"</p>
-            <p class="parrafo">Con el primero comando agregamos nuestro nombre a git y con el segundo nuestro email, usamos <span class="content-mark">--global</span> para que cada vez se haga un commit se grabe con estos datos.</p>
+            <p class="sub-titulo">Que git sepa quién somos</p>
+            <p class="parrafo">Antes de comenzar, hay que agregar nuestra identidad a git, para que a la hora de hacer
+                un commit se guarde con nuestro nombre. Para esto usamos los siguientes comandos</p>
+            <p class="content-code">git config --global user.name "tu nombre o nickname" <br> <span></span> <br> git
+                config --global user.email "tu email"</p>
+            <p class="parrafo">Con el primero comando agregamos nuestro nombre a git y con el segundo nuestro email,
+                usamos <span class="content-mark">--global</span> para que cada vez se haga un commit se grabe con estos
+                datos.</p>
             <p class="parrafo">Para ver el archivo de configuracion del usuario utilizamos este comando</p>
             <p class="content-code">git config --global -e</p>
             <p class="parrafo">Para salir escribimos <span class="content-mark">:q</span></p>
-            <p class="parrafo">Cuando usamos en git un parrametro con doble guion queremos decir que lo que estamos escribiendo es una palabra y en cambio cuando usamos uno solo estamos diciendo que es una sola letra que hace referencia a una palabra.</p>
+            <p class="parrafo">Cuando usamos en git un parámetro con doble guión queremos decir que lo que estamos
+                escribiendo es una palabra y, en cambio, cuando usamos uno solo estamos diciendo que es una sola letra que
+                hace referencia a una palabra.</p>
             <p class="sub-titulo">Crear un repositorio (Local)</p>
-            <p class="parrafo">Crear un repositorio con git es una tarea muy sencilla, unicamente hay que teclear el siguiente comando</p>
+            <p class="parrafo">Crear un repositorio con git es una tarea muy sencilla, únicamente hay que teclear el
+                siguiente comando</p>
             <p class="content-code">git init</p>
-            <p class="parrafo">Al ejecutar este comando lo que hace git es crearnos una carpeta en la raíz de nuestro proyecto llamada <span class="content-mark">.git</span>. Dentro de esta carpeta git guarda todas las referencias de las modificaciones que vayamos haciendo en nuestro repositorio.</p>
-            <p class="parrafo">Si por algun motivo quieres desacer el repositorio, puedes hacerlo borrando esta carpeta, pero cuidado se borrara todo.</p>
+            <p class="parrafo">Al ejecutar este comando lo que hace git es crearnos una carpeta en la raíz de nuestro
+                proyecto llamada <span class="content-mark">.git</span>. Dentro de esta carpeta git guarda todas las
+                referencias de las modificaciones que vayamos haciendo en nuestro repositorio.</p>
+            <p class="parrafo">Si por algún motivo quieres deshacer el repositorio, puedes hacerlo borrando esta carpeta,
+                pero cuidado se borrara todo.</p>
             <p class="sub-titulo">Algunos comandos utiles</p>
-            <p class="parrafo">Para ver la <b>version</b> de git que tenemos instalada</p>
+            <p class="parrafo">Para ver la <b>versión</b> de git que tenemos instalada</p>
             <p class="content-code">git --version</p>
-            <p class="parrafo">Con el siguiente comando es muy util, con el podemos <b>obtener ayuda</b> sobre los comandos de git y todas sus posibilidades.</p>
+            <p class="parrafo">Con el siguiente comando es muy util, con el podemos <b>obtener ayuda</b> sobre los
+                comandos de git y todas sus posibilidades.</p>
             <p class="content-code">git help</p>
             <p class="parrafo">Para obtener <b>ayuda</b> mas <b>especifica</b> sobre un comando</p>
             <p class="content-code">git help <b>comando</b></p>
             <p class="parrafo">Para ver el <b>estado de los archivos</b> de nuestro repositorio.</p>
             <p class="content-code">git status</p>
-            <p class="parrafo">Este comando sirve para diferenciar los archivos que estan en el <span class="content-mark">stage</span> de los que no lo estan, tambien es sin lugar a dudas uno de los comandos utilizados de git.</p>
+            <p class="parrafo">Este comando sirve para diferenciar los archivos que están en el <span
+                    class="content-mark">stage</span> de los que no lo estan, tambien es sin lugar a dudas uno de los
+                comandos utilizados de git.</p>
             <!-- post del 13 de enero del 2020 -->
             <p class="parrafo">Algunos <b>parámetros utiles</b> para el comando <b>status</b>.</p>
             <ul>
-                <li><span class="content-mark">-s</span> (silent) para mostrar únicamente los archivos que se han modificado o están en el stage.</li>
+                <li><span class="content-mark">-s</span> (silent) para mostrar únicamente los archivos que se han
+                    modificado o están en el stage.</li>
                 <li><span class="content-mark">-b</span> (branch) para ver la rama en la que estamos trabajando.</li>
             </ul>
             <!-- post del 12 de enero del 2020 -->
             <p class="sub-titulo">Flujo de trabajo en git (Local)</p>
-            <p class="parrafo">El flujo de trabajo en git es algo muy fácil, todo comienza en el <span class="content-mark">Working Directory</span> desde aquí podemos trabajar sin que git modifique nuestra linea del tiempo. Al usar el comando <span class="content-mark">status</span>, todos estos archivos que vamos creando o modificando se mostran de color rojo.</p>
-            <p class="parrafo">Ya después de que hemos hecho los cambios necesarios en el repositorio hay que pasar los archivos al <span class="content-mark">Staging Area</span>, los archivos se mostraran de color verde cuando ejecutemos el comando <span class="content-mark">status</span>.</p>
-            <p class="parrafo">Esta parte del proceso podemos verla como un escenario en el que pasamos todos los archivos que ya están listos para tomarles una fotografía. Ya por último tomamos la fotografía usando el comando <span class="content-mark">commit</span>, con esto estamos haciendo una copia de el estado actual de nuestros archivos y a la cual podremos regresar cuando queramos.</p>
+            <p class="parrafo">El flujo de trabajo en git es algo muy fácil, todo comienza en el <span
+                    class="content-mark">Working Directory</span> desde aquí podemos trabajar sin que git modifique
+                nuestra linea del tiempo. Al usar el comando <span class="content-mark">status</span>, todos estos
+                archivos que vamos creando o modificando se mostran de color rojo.</p>
+            <p class="parrafo">Ya después de que hemos hecho los cambios necesarios en el repositorio hay que pasar los
+                archivos al <span class="content-mark">Staging Area</span>, los archivos se mostraran de color verde
+                cuando ejecutemos el comando <span class="content-mark">status</span>.</p>
+            <p class="parrafo">Esta parte del proceso podemos verla como un escenario en el que pasamos todos los
+                archivos que ya están listos para tomarles una fotografía. Ya por último tomamos la fotografía usando el
+                comando <span class="content-mark">commit</span>, con esto estamos haciendo una copia de el estado
+                actual de nuestros archivos y a la cual podremos regresar cuando queramos.</p>
             <div class="content-img-container"><img src="../assets/imgs/git-workflow.png" alt=""></div>
             <p class="content-footer">Representacion grafica del flujo de trabajo de git</p>
             <!-- post del 13 de enero del 2020  -->
             <p class="sub-titulo">Agregar archivos al Stage</p>
-            <p class="parrafo">Como vimos previamente, antes de hacer un commit de nuestro repositorio hay que agregar los archivos al stage. Para esto usamos el comando add.</p>
+            <p class="parrafo">Como vimos previamente, antes de hacer un commit de nuestro repositorio hay que agregar
+                los archivos al stage. Para esto usamos el comando add.</p>
             <p class="parrafo">hay distintas formas de agregar archivos al stage, aquí algunas</p>
-            <p class="parrafo">Agregar un <b>unico archivo</b></p>
+            <p class="parrafo">Agregar un <b>único archivo</b></p>
             <p class="content-code">git add <b>nombre</b></p>
             <p class="parrafo">Agregar todos los <b>archivos modificados</b> del working directory</p>
             <p class="content-code">git add . <br> <span> </span> <br> git add -A</p>
@@ -78,106 +119,151 @@
             <p class="content-code">git add *.extensión</p>
             <p class="parrafo">Agregar todos los archivos <b>dentro de una carpeta</b></p>
             <p class="content-code">git add carpeta/</p>
-            <p class="parrafo">También podemos hacer combinaciones, por ejemplo para agregar todos los archivos que estén dentro de una carpeta y que posean una determinada extensión se puede hacer así:</p>
+            <p class="parrafo">También podemos hacer combinaciones, por ejemplo para agregar todos los archivos que
+                estén dentro de una carpeta y que posean una determinada extensión se puede hacer así:</p>
             <p class="content-code">git add carpeta/*.extensión</p>
-            <p class="parrafo">Tambien podemos <b>excluir archivos del stage</b> con la siguiente instrucción</p>
+            <p class="parrafo">También podemos <b>excluir archivos del stage</b> con la siguiente instrucción</p>
             <p class="content-code">git reset <b>archivo</b></p>
             <p class="sub-titulo">Hacer commits</p>
-            <p class="parrafo">Los commits en git son como fotografías que captan el estado actual de nuestro repositorio y que se guardan en la línea del tiempo de la rama en la que estamos trabajando, para que si lo necesitamos podamos volver.</p>
-            <p class="parrafo">Podemos hacer un commit de la siguiente manera</p>
+            <p class="parrafo">Los commits en git son como fotografías que captan el estado actual de nuestro
+                repositorio y que se guardan en la línea del tiempo de la rama en la que estamos trabajando, para que si
+                lo necesitamos podamos volver.</p>
+            <p class="parrafo">Podemos hacer un commit de la siguiente manera:</p>
             <p class="content-code">git commit -m "mensaje del commit"</p>
             <p class="parrafo">Hacer un commit de varias lineas.</p>
-            <p class="parrafo">Para escribir pulsamos <span class="content-mark">a</span> y para terminar el texto presionamos la tecla <span class="content-mark">esc</span> y para salir y guardar el commit <span class="content-mark">:wq</span>.</p>
+            <p class="parrafo">Para escribir pulsamos <span class="content-mark">a</span> y para terminar el texto
+                presionamos la tecla <span class="content-mark">esc</span> y para salir y guardar el commit <span
+                    class="content-mark">:wq</span>.</p>
             <p class="content-code">git commit</p>
-            <p class="parrafo">Para agregar todos los archivos modificados al stage y al mismo tiempo hacer un commit.</p>
+            <p class="parrafo">Para agregar todos los archivos modificados al stage y al mismo tiempo hacer un commit:
+            </p>
             <p class="content-code">git commit -am "Mensaje del commit"</p>
-            <p class="parrafo">Una buena práctica a la hora de escribir los mensajes de los commits es que deben de esta en tiempo presente y que describan lo que hicimos exactamente y el o los archivos donde hicimos los cambios.</p>
-            <p class="parrafo">Para mas informacion de los mensajes mira este post de <a href="https://www.genbeta.com/desarrollo/son-nuestros-comentarios-en-los-commits-lo-suficientemente-utiles">Genbeta</a></p>
-            <p class="parrafo">Para <b>ver la línea del tiempo de commits</b> de la rama en la que estamos trabajando (del más nuevo al más viejo).</p>
+            <p class="parrafo">Una buena práctica a la hora de escribir los mensajes de los commits es que deben de esta
+                en tiempo presente y que describan lo que hicimos exactamente y el, o los, archivos donde hicimos los
+                cambios.</p>
+            <p class="parrafo">Para mas informacion de los mensajes mira este post de <a
+                    href="https://www.genbeta.com/desarrollo/son-nuestros-comentarios-en-los-commits-lo-suficientemente-utiles">Genbeta</a>
+            </p>
+            <p class="parrafo">Para <b>ver la línea del tiempo de commits</b> de la rama en la que estamos trabajando
+                (del más nuevo al más viejo):</p>
             <p class="content-code">git log</p>
-            <p class="parrafo">Algunos parámetros para ver de una forma más estilizada los commits de la línea del tiempo.</p>
+            <p class="parrafo">Algunos parámetros para ver de una forma más estilizada los commits de la línea del
+                tiempo.</p>
             <ul>
-                <li><span class="content-mark">--online</span> Para mostrar los commits de una manera mas corta</li>
-                <li><span class="content-mark">--all</span> Para mostrar la informacion de la rama en la que trabajamos</li>
-                <li><span class="content-mark">--decorate</span> y <span class="content-mark">--graph</span> sirven para ver de una forma mas estilizada la informacion que nos muesta este comando</li>
+                <li><span class="content-mark">--online</span> Para mostrar los commits de una manera más corta</li>
+                <li><span class="content-mark">--all</span> Para mostrar la informacion de la rama en la que trabajamos
+                </li>
+                <li><span class="content-mark">--decorate</span> y <span class="content-mark">--graph</span> sirven para
+                    ver de una forma mas estilizada la informacion que nos muesta este comando</li>
             </ul>
             <p class="parrafo">Reescribir el mensaje del último commit.</p>
             <p class="content-code">git commit --amend -m "Mensaje del commit"</p>
             <p class="sub-titulo">Crear alias</p>
-            <p class="parrafo">Los alias son shortcuts que podemos crear en git para ahorrarnos el tiempo de escribir largas líneas de parámetros.</p>
+            <p class="parrafo">Los alias son shortcuts que podemos crear en git para ahorrarnos el tiempo de escribir
+                largas líneas de parámetros.</p>
             <p class="parrafo">Así es como se crean: </p>
             <p class="content-code">git config --global alias.tuShortcut "comando a ejecutar"</p>
-            <p class="parrafo">Dos alias para simplificar la existencia</p>
-            <p class="content-code">git config --global alias.lg "log --oneline --decorate --all --graph" <br> <span> </span> <br> git config --global alias.s "status -s -b"</p>
+            <p class="parrafo">Dos alias para simplificar la existencia:</p>
+            <p class="content-code">git config --global alias.lg "log --oneline --decorate --all --graph" <br> <span>
+                </span> <br> git config --global alias.s "status -s -b"</p>
             <!-- post del 14 de enero del 2020  -->
             <p class="sub-titulo">Viajes en el tiempo</p>
-            <p class="parrafo">Con git podemos movernos a cualquier parte de la línea del tiempo de nuestro repositorio.</p>
-            <p class="parrafo">Esta es una funcionalidad muy potente por que nos permite reconstruir nuestro proyecto a como estaba en cualquier punto y así poder revertir cambios que no nos hayan gustado o incluso hasta recuperar archivos borrados.</p>
+            <p class="parrafo">Con git podemos movernos a cualquier parte de la línea del tiempo de nuestro repositorio.
+            </p>
+            <p class="parrafo">Esta es una funcionalidad muy potente por que nos permite reconstruir nuestro proyecto a
+                como estaba en cualquier punto y así poder revertir cambios que no nos hayan gustado o incluso hasta
+                recuperar archivos borrados.</p>
             <p class="parrafo">Para <b>restaurar</b> <b>todos los archivos</b> al último commit.</p>
             <p class="content-code">git checkout --.</p>
             <p class="parrafo">Para <b>restaurar</b> un <b>archivo específico</b> a como estaba en su último commit.</p>
             <p class="content-code">git checkout --<b>nombre</b></p>
-            <p class="parrafo">Para movernos a un punto de la historia pero <b>conservando todos los cambios</b> posteriores a ese punto.</p>
+            <p class="parrafo">Para movernos a un punto de la historia pero <b>conservando todos los cambios</b>
+                posteriores a ese punto.</p>
             <p class="content-code">git reset --soft <b>hash del commit</b></p>
-            <p class="parrafo">Para movernos a un punto de la historia pero <b>borrando todos los cambios</b> posteriores a ese punto de la historia.</p>
+            <p class="parrafo">Para movernos a un punto de la historia pero <b>borrando todos los cambios</b>
+                posteriores a ese punto de la historia.</p>
             <p class="content-code">git reset --hard <b>hash del commit</b></p>
             <!-- post del 15 de enero del 2020  -->
             <p class="parrafo"><b>Comandos útiles</b> a la hora de hacer <b>viajes en el tiempo</b>.</p>
-            <p class="parrafo">Para ver las <b>diferencias</b> entre el último commit y el commit actual usamos el siguiente comando.</p>
+            <p class="parrafo">Para ver las <b>diferencias</b> entre el último commit y el commit actual usamos el
+                siguiente comando.</p>
             <p class="content-code">git diff</p>
-            <p class="parrafo">Hay una variación del comando diff para ver las <b>diferencias</b> de  los archivos que están en el <b>stage</b></p>
+            <p class="parrafo">Hay una variación del comando diff para ver las <b>diferencias</b> de los archivos que
+                están en el <b>stage</b></p>
             <p class="content-code">git diff --staged</p>
-            <p class="parrafo">El siguiente comando es muy potente porque nos deja <b>ver todos los cambios que hemos hecho en nuestro proyecto</b>, incluso si borramos commits, esto es muy útil para revertir los cambios que hacemos cuando viajamos en el tiempo con  <span class="content-mark">--hard</span>.</p>
+            <p class="parrafo">El siguiente comando es muy potente porque nos deja <b>ver todos los cambios que hemos
+                    hecho en nuestro proyecto</b>, incluso si borramos commits, esto es muy útil para revertir los
+                cambios que hacemos cuando viajamos en el tiempo con <span class="content-mark">--hard</span>.</p>
             <p class="content-code">git reflog</p>
             <p class="sub-titulo">Renombrar o borrar archivos con git</p>
             <p class="parrafo">Para <b>renombrar</b> archivos.</p>
             <p class="content-code">git mv <b>nombreOriginal</b> <b>nombreNuevo</b></p>
             <p class="parrafo">Para <b>borrar</b> un archivo</p>
             <p class="content-code">git rm <b>nombre</b></p>
-            <p class="parrafo">Cuando borremos o renombremos archivos ya sea con git o de forma manual siempre es recomendable usar</p>
+            <p class="parrafo">Cuando borremos o renombremos archivos ya sea con git o de forma manual siempre es
+                recomendable usar</p>
             <p class="content-code">git add -u</p>
-            <p class="parrafo">Antes de agregar al stage para no tener problemas ya que en ocasiones git add -A no reconoce de primeras los archivos borrados o que cambiaron de nombre.</p>
+            <p class="parrafo">Antes de agregar al stage para no tener problemas ya que en ocasiones git add -A no
+                reconoce de primeras los archivos borrados o que cambiaron de nombre.</p>
             <!-- post del 16 de enero del 2020 -->
             <p class="sub-titulo">Ignorar archivos</p>
-            <p class="parrafo">Con git podemos dejar de hacer seguimiento a los archivos que queramos para esto tenemos que crear un archivo <span class="content-mark">.gitignore</span> en la raíz de nuestro proyecto y a continuación dentro de este escribimos los nombres de los archivos que dejaremos sin seguimiento, pero cuidado que si actualizamos o borramos estos archivos despues no podremos recuperarlos.</p>
+            <p class="parrafo">Con git podemos dejar de hacer seguimiento a los archivos que queramos para esto tenemos
+                que crear un archivo <span class="content-mark">.gitignore</span> en la raíz de nuestro proyecto y a
+                continuación dentro de este escribimos los nombres de los archivos que dejaremos sin seguimiento, pero
+                cuidado que si actualizamos o borramos estos archivos despues no podremos recuperarlos.</p>
             <p class="sub-titulo">Ramificaciones en Git</p>
-            <p class="parrafo">Las ramas en git son líneas del tiempo alternativas a la rama principal (casi siempre la rama <span class="content-mark">master</span>) que podemos crear para trabajar en tareas específicas de nuestro proyecto y que podemos fusionar o no a la rama de la que emergió. </p>
-            <p class="parrafo">Para <b>crear</b> una rama nueva</p>
+            <p class="parrafo">Las ramas en git son líneas del tiempo alternativas a la rama principal (casi siempre la
+                rama <span class="content-mark">master</span>) que podemos crear para trabajar en tareas específicas de
+                nuestro proyecto y que podemos fusionar o no a la rama de la que emergió. </p>
+            <p class="parrafo">Para <b>crear</b> una rama nueva:</p>
             <p class="content-code">git branch <b>nombre</b></p>
-            <p class="parrafo">Para <b>ver las ramas</b> que tenemos en nuestro proyecto</p>
+            <p class="parrafo">Para <b>ver las ramas</b> que tenemos en nuestro proyecto:</p>
             <p class="content-code">git branch</p>
-            <p class="parrafo">Para <b>movernos a una determinada rama</b> usamos el siguiente comando</p>
+            <p class="parrafo">Para <b>movernos a una determinada rama</b> usamos el siguiente comando:</p>
             <p class="content-code">git checkout <b>nombre</b></p>
-            <p class="parrafo">Podemos usar el comando diff <b>para ver las diferencias</b> entre dos ramas</p>
+            <p class="parrafo">Podemos usar el comando diff <b>para ver las diferencias</b> entre dos ramas:</p>
             <p class="content-code">git diff <b>nombre1</b> <b>nombre2</b></p>
             <p class="parrafo"><b>Unir ramas</b></p>
-            <p class="parrafo">Para unir dos ramas primero tenemos que movernos a la rama de la que emergió la rama que queremos fusionar.</p>
+            <p class="parrafo">Para unir dos ramas primero tenemos que movernos a la rama de la que emergió la rama que
+                queremos fusionar.</p>
             <p class="parrafo">y después usamos el siguiente comando</p>
             <p class="content-code">git merge <b>nombreDeLaRamaAUnir</b></p>
-            <p class="parrafo">Ahora los commits de la rama que fusionamos a nuestra rama principal se mostrarán como si siempre hubieran estado ahí, claro si todo sale bien…</p>
+            <p class="parrafo">Ahora los commits de la rama que fusionamos a nuestra rama principal se mostrarán como si
+                siempre hubieran estado ahí, claro si todo sale bien…</p>
             <!-- post del 17 de enero del 2020 -->
             <p class="parrafo"><b>Posibles escenarios</b> a la hora de hacer un merge.</p>
             <p class="parrafo">A la hora de unir ramas nos vamos a topar con uno de los siguientes escenarios.</p>
             <ul>
-                <li><span class="content-mark">Fast-forward</span >: Esto pasa cuando en la rama principal, osea a la que le queremos unir una rama no se modificó y por lo tanto git puede unir sin complicaciones, esta es la forma mas rapida, por que git hace todo el trabajo por nosotros :D.</li>
-                <li><span class="content-mark">Uniones automáticas</span>:  Esta unión se genera cuando git detecta cambios en la rama principal y la rama que se quiere fusionar, pero ve que las líneas modificadas en ambas ramas son diferentes. por lo que hace la unión el solo.</li>
-                <li><span class="content-mark">Unión Manual</span>: Es lo que ocurre cuando en ambas ramas se realizarán modificaciones afectando las mismas líneas de código. Aqui si hay que tocar código para elegir cuáles cambios queremos de ambas ramas.</li>
+                <li><span class="content-mark">Fast-forward</span>: Esto pasa cuando en la rama principal, osea a la que
+                    le queremos unir una rama no se modificó y por lo tanto git puede unir sin complicaciones, esta es
+                    la forma mas rapida, por que git hace todo el trabajo por nosotros :D.</li>
+                <li><span class="content-mark">Uniones automáticas</span>: Esta unión se genera cuando git detecta
+                    cambios en la rama principal y la rama que se quiere fusionar, pero ve que las líneas modificadas en
+                    ambas ramas son diferentes. por lo que hace la unión el solo.</li>
+                <li><span class="content-mark">Unión Manual</span>: Es lo que ocurre cuando en ambas ramas se realizarán
+                    modificaciones afectando las mismas líneas de código. Aqui si hay que tocar código para elegir
+                    cuáles cambios queremos de ambas ramas.</li>
             </ul>
-            <p class="parrafo">En los primeros dos escenarios git hará todo el trabajo, por lo que no hay que preocuparnos pero en el último si, pero no hay que asustarnos para resolver los conflictos entre las ramas los editores de texto como sublime text o visual studio code nos proporcionan ayudas visuales muy buenas para elegir los fragmentos de código que queramos de ambas ramas.</p>
+            <p class="parrafo">En los primeros dos escenarios git hará todo el trabajo, por lo que no hay que
+                preocuparnos pero en el último si, pero no hay que asustarnos para resolver los conflictos entre las
+                ramas los editores de texto como sublime text o visual studio code nos proporcionan ayudas visuales muy
+                buenas para elegir los fragmentos de código que queramos de ambas ramas.</p>
             <p class="content-code">
                 <<<<< [Rama A] <br> <span></span> <br>
-                [Aquí estará el código de la modificación  número 1]<br> <span></span> <br>
-                =====<br> <span></span> <br>
-                [Aquí estará el código de la modificación  número 2]<br> <span></span> <br>
-                >>>>> [Rama B]
+                    [Aquí estará el código de la modificación número 1]<br> <span></span> <br>
+                    =====<br> <span></span> <br>
+                    [Aquí estará el código de la modificación número 2]<br> <span></span> <br>
+                    >>>>> [Rama B]
             </p>
-            <p class="parrafo">Lo unico que tenemos que hacer, es elegir la modificación que queramos y eliminar todo lo demas para despues hacer el commit del merge.</p>
+            <p class="parrafo">Lo único que tenemos que hacer, es elegir la modificación que queramos y eliminar todo lo
+                demás para despues hacer el commit del merge.</p>
             <p class="parrafo">Para <b>borrar</b> ramas</p>
             <p class="content-code">git branch -d <b>nombre</b></p>
             <p class="parrafo">Para <b>crear una rama y movernos a ella</b> en la misma linea</p>
             <p class="content-code">git checkout -b <b>nombre</b></p>
             <p class="sub-titulo">Etiquetando nuestros commits</p>
-            <p class="parrafo">Los tags son una referencia a un commit. Normalmente los tags son usados para <b>marcar las versiones</b> de nuestro proyecto.</p>
+            <p class="parrafo">Los tags son una referencia a un commit. Normalmente los tags son usados para <b>marcar
+                    las versiones</b> de nuestro proyecto.</p>
             <p class="parrafo"><b>Agregar</b> un <b>Lightweight Tag</b> al último commit</p>
             <p class="content-code">git tag <b>nombre</b></p>
             <!-- <!-- <p class="parrafo"><b>Agregar</b> un <b>Annotated Tag</b> al último commit</p> -->
@@ -185,7 +271,9 @@
             <!-- <p class="parrafo">En donde está la palabra <b>version</b> justo después de la bandera <span class="content-mark">-a</span> va el nombre de nuestra versión o la anotación de nuestro tag.</p> -->
             <p class="parrafo">Agregar un <b>Annotated Tag</b> a <b>cualquier commit</b> de nuestra línea del tiempo</p>
             <p class="content-code">git tag -a <b>version</b> <b>hash</b> -m “mensaje del tag”</p>
-            <p class="parrafo">En donde está la palabra <b>version</b> justo después de la bandera <span class="content-mark">-a</span> va el nombre de nuestra versión o la anotación de nuestro tag y donde esta la palabra <b>hash</b> va el hash referente a el commit que queremos etiquetar.</p>
+            <p class="parrafo">En donde está la palabra <b>version</b> justo después de la bandera <span
+                    class="content-mark">-a</span> va el nombre de nuestra versión o la anotación de nuestro tag y donde
+                esta la palabra <b>hash</b> va el hash referente a el commit que queremos etiquetar.</p>
             <p class="parrafo">Para <b>ver los tags</b> de nuestro repositorio</p>
             <p class="content-code">git tag</p>
             <p class="parrafo">Para ver toda la <b>información</b> de un <b>tag en concreto</b></p>
@@ -194,95 +282,143 @@
             <p class="content-code">git tag -d <b>nombre</b></p>
             <!-- post del 22 de enero del 2020 -->
             <p class="sub-titulo">Reservar para después (con git stash)</p>
-            <p class="parrafo">Imaginemos que estemos trabajando en una nueva característica de nuestro proyecto, estamos en la rama principal y llevamos mucho tiempo desarrollandola,  pero aún no está lista y de buenas a primeras necesitamos desplegar nuestro proyecto, es muy probable que esta nueva característica cause problemas.</p>
-            <p class="parrafo">Lo que haríamos para solucionar esto de forma manual (sin git) sería retirar todo ese código que hemos agregado por la nueva funcionalidad y guardarlo en cualquier otro lado para ahora así poder desplegar nuestra aplicación sin errores y después ya pasada la urgencia integrar de nuevo nuestro código para seguir trabajando.</p>
-            <p class="parrafo">Pues bien esto es exactamente lo que hace el comando <span class="content-mark">stash</span> de git, toma todos los cambios que hemos realizado desde el último commit (esto incluye los que estan en el stage) y los guarda en un área temporal mientras resolvemos nuestra urgencia para que una vez terminada podamos sacar esos cambios y los reincorporamos al proyecto para seguir trabajando normalmente.</p>
-            <p class="parrafo">Si bien podemos ahorrarnos esto creando una rama para esta funcionalidad en concreto, en el dia a dia se nos puede olvidar y ya cuando es demasiado tarde caemos en cuenta de que podíamos hacerlo de esta manera además <b>es muy fácil usar el stash</b>.</p>
+            <p class="parrafo">Imaginemos que estamos trabajando en una nueva característica de nuestro proyecto,
+                estamos en la rama principal y llevamos mucho tiempo desarrollándola, pero aún no está lista y, de buenas
+                a primeras, necesitamos desplegar nuestro proyecto, es muy probable que esta nueva característica cause
+                problemas.</p>
+            <p class="parrafo">Lo que haríamos para solucionar esto de forma manual (sin git) sería retirar todo ese
+                código que hemos agregado por la nueva funcionalidad y guardarlo en cualquier otro lado para ahora así
+                poder desplegar nuestra aplicación sin errores y después ya pasada la urgencia integrar de nuevo nuestro
+                código para seguir trabajando.</p>
+            <p class="parrafo">Pues bien esto es exactamente lo que hace el comando <span
+                    class="content-mark">stash</span> de git, toma todos los cambios que hemos realizado desde el último
+                commit (esto incluye los que estan en el stage) y los guarda en un área temporal mientras resolvemos
+                nuestra urgencia para que una vez terminada podamos sacar esos cambios y los reincorporamos al proyecto
+                para seguir trabajando normalmente.</p>
+            <p class="parrafo">Si bien podemos ahorrarnos esto creando una rama para esta funcionalidad en concreto, en
+                el día a día se nos puede olvidar y ya cuando es demasiado tarde caemos en cuenta de que podíamos
+                hacerlo de esta manera además <b>es muy fácil usar el stash</b>.</p>
             <div class="content-img-container"><img src="../assets/imgs/stash.png" alt=""></div>
-            <p class="content-footer">Representacion grafica del stash</p>
-            <p class="parrafo">Para <b>guardar para después</b>, sin la necesidad de hacer commit y regresando al último.</p>
+            <p class="content-footer">Representación gráfica del stash</p>
+            <p class="parrafo">Para <b>guardar para después</b>, sin la necesidad de hacer commit y regresando al
+                último.</p>
             <p class="content-code">git stash save "Mensaje del stash"</p>
             <p class="parrafo">Para <b>ver todos los stashes</b>.</p>
             <p class="content-code">git stash list --stat</p>
             <p class="parrafo">Para <b>ver</b> la información de un <b>stash en específico</b>.</p>
             <p class="content-code">git show stash <b>stash@{index}</b></p>
-            <p class="parrafo">Y para <b>retomar el trabajo</b> desde un determinado stash. los archivos recuperados a pareseran en rojo de modificados</p>
-            <p class="parrafo">Al igual que al fusionar ramas, al traer los cambios del stash podemos ocacionar conflictos, y los podemos solucionar como lo hacemos con los de las ramas.</p>
+            <p class="parrafo">Y para <b>retomar el trabajo</b> desde un determinado stash. los archivos recuperados a
+                pareseran en rojo de modificados</p>
+            <p class="parrafo">Al igual que al fusionar ramas, al traer los cambios del stash podemos ocacionar
+                conflictos, y los podemos solucionar como lo hacemos con los de las ramas.</p>
             <p class="content-code">git stash apply <b>stash@{index}</b></p>
             <p class="parrafo">Para <b>borrar un stash</b> de nuestra lista de stashes.</p>
             <p class="content-code">git stash drop <b>stash@{index}</b></p>
             <!-- post del 23 de enero del 2020 -->
             <p class="parrafo">Otras formas de guardar en el stash</p>
-            <p class="parrafo">Para guardar todos los archivos modificados menos los que están en el stash por si queremos hacer un commit.</p>
+            <p class="parrafo">Para guardar todos los archivos modificados menos los que están en el stash por si
+                queremos hacer un commit.</p>
             <p class="content-code">git stash save --keep-index</p>
-            <p class="parrafo">Para incluir todos los archivos con cambios a la lista de archivos sin seguimiento de git</p>
+            <p class="parrafo">Para incluir todos los archivos con cambios a la lista de archivos sin seguimiento de git
+            </p>
             <p class="content-code">git stash save --include-untrack</p>
             <!-- post del 24 de enero del 2020 -->
             <p class="sub-titulo">Que es el rebase?</p>
-            <p class="parrafo">Git rebase es un comando que al igual como lo hace merge, nos permite unir ramas pero con la diferencia de que rebase modifica la linea del tiempo para que aparezcan todos los commits de la rama que fusionamos justo después del último commit de la rama principal a la que le unimos la rama, haciendo parecer como que si nunca hubiera habido una rama o una fusión.</p>
+            <p class="parrafo">Git rebase es un comando que al igual como lo hace merge, nos permite unir ramas pero con
+                la diferencia de que rebase modifica la linea del tiempo para que aparezcan todos los commits de la rama
+                que fusionamos justo después del último commit de la rama principal a la que le unimos la rama, haciendo
+                parecer como que si nunca hubiera habido una rama o una fusión.</p>
             <div class="content-img-container"><img src="../assets/imgs/rebase.jpeg" alt=""></div>
-            <p class="content-footer">Representacion grafica del rebase</p>
+            <p class="content-footer">Representación gráfica del rebase</p>
             <p class="parrafo">Para utilizar rebase:</p>
             <p class="content-code">git rebase <b>branch</b></p>
-            <p class="parrafo">Para mas informacion hacerca de rebase puedes ver esta pregunta en <a href="https://es.stackoverflow.com/questions/94536/para-qu%C3%A9-sirve-el-comando-o-par%C3%A1metro-rebase-en-git">stackoverflow</a></p>
+            <p class="parrafo">Para más información acerca de rebase puedes ver esta pregunta en: <a
+                    href="https://es.stackoverflow.com/questions/94536/para-qu%C3%A9-sirve-el-comando-o-par%C3%A1metro-rebase-en-git">stackoverflow</a>
+            </p>
             <p class="sub-titulo">Rebase interactivo</p>
-            <p class="parrafo">Como ya dijimos antes, un parámetro puede cambiar por completo el funcionamiento del comando que lo recibe, pues bien ese es el caso de rebase con <span class="content-mark">-i</span> abreviatura de interactive.</p>
-            <p class="parrafo">Esta funcionalidad es muy potente por que nos permite hacer varias cosas con un solo comando:</p>
+            <p class="parrafo">Como ya dijimos antes, un parámetro puede cambiar por completo el funcionamiento del
+                comando que lo recibe, pues bien ese es el caso de rebase con <span class="content-mark">-i</span>
+                abreviatura de interactive.</p>
+            <p class="parrafo">Esta funcionalidad es muy potente por que nos permite hacer varias cosas con un solo
+                comando:</p>
             <ul>
-                <li> <span class="content-mark">squash</span> Unir varios commits en uno</li>
-                <li> <span class="content-mark">reword</span> Corregir el mensaje de commits</li>
-                <li> <span class="content-mark">edit</span> Separar varios commits</li>
+                <li> <span class="content-mark">squash</span> Unir varios commits en uno.</li>
+                <li> <span class="content-mark">reword</span> Corregir el mensaje de commits.</li>
+                <li> <span class="content-mark">edit</span> Separar varios commits.</li>
             </ul>
             <p class="parrafo">Unir commits</p>
-             <p class="parrafo">Para unir dos o mas commits en uno solo primero hay que ejecutar el rebase interactivo asi:</p>
+            <p class="parrafo">Para unir dos o más commits en uno solo primero hay que ejecutar el rebase interactivo
+                así:</p>
             <p class="content-code">git rebase -i HEAD~<b>numero</b></p>
-            <p class="parrafo">Donde va <b>numero</b> sustituimos por el numero de commits que queremos seleccionar para hacer los cambios.</p>
+            <p class="parrafo">Donde va <b>número</b> sustituimos por el número de commits que queremos seleccionar para
+                hacer los cambios.</p>
             <div class="content-img-container"><img src="../assets/imgs/REBASE1TUTO.png" alt=""></div>
             <p class="content-footer">Interfaz del Rebase intertactivo</p>
-            <p class="parrafo">Como podemos ver hasta arriba estan 3 commits que son los que seleccione con la sintaxis <span class="content-mark">HEAD~3</span>. Estos son los commits a los que se les aplicaran los cambios que seleccionamos.</p>
-            <p class="parrafo">En este caso lo que queremos hacer es unir todo en un solo commit para eso tenemos que pulsar la letra <span class="content-mark">a</span> para poder escribir y reemplazar la palabra que ya tenemos por defecto <span class="content-mark">pick</span> que aparece antes de cada commit por la palabra <span class="content-mark">squash</span> o simplemente por la <span class="content-mark">s</span> que es la letra por la que empieza squash.</p>
-            <p class="parrafo">Una vez terminado el paso anterior pulsamos <span class="content-mark">esc</span> y luego <span class="content-mark">:wq</span>.</p>
+            <p class="parrafo">Como podemos ver hasta arriba estan 3 commits que son los que seleccione con la sintaxis
+                <span class="content-mark">HEAD~3</span>. Estos son los commits a los que se les aplicaran los cambios
+                que seleccionamos.</p>
+            <p class="parrafo">En este caso lo que queremos hacer es unir todo en un solo commit para eso tenemos que
+                pulsar la letra <span class="content-mark">a</span> para poder escribir y reemplazar la palabra que ya
+                tenemos por defecto <span class="content-mark">pick</span> que aparece antes de cada commit por la
+                palabra <span class="content-mark">squash</span> o simplemente por la <span
+                    class="content-mark">s</span> que es la letra por la que empieza squash.</p>
+            <p class="parrafo">Una vez terminado el paso anterior pulsamos <span class="content-mark">esc</span> y luego
+                <span class="content-mark">:wq</span>.</p>
             <p class="parrafo">Esto nos llevara a otra pantalla donde estan los mensajes de los 3 commits</p>
             <div class="content-img-container"><img src="../assets/imgs/rebase2.png" alt=""></div>
-            <p class="parrafo">Lo unico que tenemos que hacer aqui es borrar los mensajes y poner el mensaje que tendra el nuevo commit.Una vez terminado pulsamos <span class="content-mark">esc</span> y <span class="content-mark">:wq</span> para guardar los cambios.</p>
+            <p class="parrafo">Lo único que tenemos que hacer aqui es borrar los mensajes y  p oner el mensaje que tendrá
+                el nuevo commit. Una vez terminado pulsamos <span class="content-mark">esc</span> y <span
+                    class="content-mark">:wq</span> para guardar los cambios.</p>
             <p class="parrafo">Para editar el mensaje de los commits ejecutamos el comando</p>
-            <p class="content-code">git rebase -i HEAD~<b>numero</b></p>
-            <p class="parrafo">como lo hicimos anteriormente, en este caso solo vamos a editar el mensaje del ultimo commit, por lo que sustituire <b>numero</b> por <b>1</b>.</p>
+            <p class="content-code">git rebase -i HEAD~<b>número</b></p>
+            <p class="parrafo">como lo hicimos anteriormente, en este caso solo vamos a editar el mensaje del último
+                commit, por lo que sustituire <b>numero</b> por <b>1</b>.</p>
             <div class="content-img-container"><img src="../assets/imgs/rebase3.png" alt=""></div>
-            <p class="parrafo">y como vez, sustituimos <span class="content-mark">pick</span> por <span class="content-mark">reword</span>.Guardamos cambios y nos mandara a una pantalla muy parecida a la que nos mostro git cuando fusionamos varios commits, en esa pantalla editamos el mensaje y guardamos.</p>
+            <p class="parrafo">y como vez, sustituimos <span class="content-mark">pick</span> por <span
+                    class="content-mark">reword</span>.Guardamos cambios y nos mandara a una pantalla muy parecida a la
+                que nos mostro git cuando fusionamos varios commits, en esa pantalla editamos el mensaje y guardamos.
+            </p>
             <p class="parrafo">Para dividir un commit en muchos</p>
             <!-- post del 25 de enero del 2020 -->
-            <p class="parrafo">Primero hay que usar el comando que ya hemos estado usando e indicamos cuantos commits queremos tomar</p>
+            <p class="parrafo">Primero hay que usar el comando que ya hemos estado usando e indicamos cuantos commits
+                queremos tomar:</p>
             <p class="content-code">git rebase -i HEAD~<b>numero</b></p>
-            <p class="parrafo">Eso nos mandara a la pantalla que ya vimos anteriormente, seleccionamos el commit que queremos dividir escribiendo antes de su hash la palabra <span class="content-mark">edit</span>, pulsamos <span class="content-mark">:wq</span> para guardar cambios</p>
-            <p class="parrafo">Una vez fuera de la interfaz usamos el siguiente comando para revertir los cambios del ultimo commit sin perder los cambios</p>
+            <p class="parrafo">Eso nos mandará a la pantalla que ya vimos anteriormente, seleccionamos el commit que
+                queremos dividir escribiendo antes de su hash la palabra <span class="content-mark">edit</span>,
+                pulsamos <span class="content-mark">:wq</span> para guardar cambios</p>
+            <p class="parrafo">Una vez fuera de la interfaz usamos el siguiente comando para revertir los cambios del
+                último commit sin perder los cambios:</p>
             <p class="content-code">git reset HEAD^</p>
-            <p class="parrafo">Ahora que los cambios que contenia el commit estan en el stage, listos para hacer con ellos los commits que necesitemos.</p>
+            <p class="parrafo">Ahora que los cambios que contenia el commit estan en el stage, listos para hacer con
+                ellos los commits que necesitemos.</p>
             <p class="parrafo">Una vez que terminemos usamos este comando para que git sepa que hemos terminado</p>
             <p class="content-code">git rebase --continue</p>
-       
-       
-       
-       
-       
-       
-       
-       
+
+
+
+
+
+
+
+
         </div>
         <p class="post-date">Tags: <a href="#" class="tag">#GIT</a></p>
         <div id="disqus_thread" class="discus"></div>
     </div>
     <!-- scripts -->
     <script>
-        (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://jesusvelasco.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
+        (function () { // DON'T EDIT BELOW THIS LINE
+            var d = document,
+                s = d.createElement('script');
+            s.src = 'https://jesusvelasco.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>                              
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
     <script id="dsq-count-scr" src="//jesusvelasco.disqus.com/count.js" async></script>
 
 </body>
+
 </html>
